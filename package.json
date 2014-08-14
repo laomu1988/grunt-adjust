@@ -1,8 +1,8 @@
 {
   "name": "grunt-adjust",
   "description": "A grunt plugin to import css and js file to html.",
-  "version": "0.0.1",
-  "homepage": "https://github.com/hellometers/grunt-sprite",
+  "version": "0.0.2",
+  "homepage": "https://github.com/laomu1988/grunt-sprite",
   "author": {
     "name": "laomu1988",
     "email": "laomu1988@qq.com",
@@ -10,15 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hellometers/grunt-sprite.git"
-  },
-  "bugs": {
-    "url": "https://github.com/hellometers/grunt-sprite/issues"
+    "url": "git://github.com/laomu1988/grunt-adjust.git"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/hellometers/grunt-sprite/blob/master/LICENSE-MIT"
+      "url": "https://github.com/laomu1988/grunt-adjust/blob/master/LICENSE"
     }
   ],
   "main": "Gruntfile.js",
@@ -30,10 +27,5 @@
     "adjust"
   ],
   "readmeFilename": "README.md",
-  "_id": "grunt-adjust@0.0.1",
-  "dist": {
-    "shasum": "8f1302ba8ee70ae75b25a116a2b8164b6d3ef9a1"
-  },
-  "_from": "grunt-sprite@",
-  "_resolved": "https://registry.npmjs.org/grunt-sprite/-/grunt-sprite-0.0.5.tgz"
+  "_id": "grunt-adjust@0.0.2"
 }

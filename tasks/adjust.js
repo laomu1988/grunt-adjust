@@ -33,6 +33,16 @@ module.exports = function (grunt) {
         body = context.substring(len2);
         var points = body.match(/(<link .*\/>)|(<script .*>.*<\/script>)/g);
         var css='',js='';//需要增加的css和js
+
+        //替换title标签
+        var title = body.match(/<title.*<\/title>/gi);
+        if(title && title.length>0){
+          log("替换标题:"+title[title.length -1]);
+          body = body.replace(/<title.*<\/title>/gi,'');
+          head = head.replace(/<title.*<\/title>/gi,title[title.length -1]);
+          context = head+body;
+        }
+
         if(points){
           for(var i = 0;i<points.length;i++){
             var point = points[i];
@@ -45,11 +55,6 @@ module.exports = function (grunt) {
             len1 = body.indexOf(point);
             len2 = len1+point.length;
             body = body.substring(0,len1)+body.substring(len2);
-          }
-          var title = body.match(/<title.*<\/title>/gi);
-          if(title && title.length>0){
-            body = body.replace(/<title.*<\/title>/gi,'');
-            head = head.replace(/<title.*<\/title>/gi,title[title.length -1]);
           }
           outdata = head+body;
           outdata = outdata.replace(options.css,css+options.css);

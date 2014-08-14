@@ -14,8 +14,8 @@ module.exports = function(grunt) {
       adjust: {
           test: {
               options: {
-                css:'</head>',
-                js:'</head>'
+                css:'</head>',//添加css链接的位置
+                js:'</head>'//添加js文件的位置
               },
               files: [
                   {
